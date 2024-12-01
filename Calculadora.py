@@ -52,39 +52,3 @@ def menu():
     opcion = input("\nSeleccione una opción: ")
     return opcion
 
-def main():
-    while True:
-        opcion = menu()
-        if opcion == "1":
-            numeros = list(map(float, input("Ingrese los números separados por espacio: ").split()))
-            print(f"Resultado: {sumar(*numeros)}")
-        elif opcion == "2":
-            a, b = map(float, input("Ingrese los dos números separados por espacio: ").split())
-            print(f"Resultado: {restar(a, b)}")
-        elif opcion == "3":
-            a, b = map(float, input("Ingrese los dos números separados por espacio: ").split())
-            print(f"Resultado: {dividir(a, b)}")
-        elif opcion == "4":
-            a, b = map(float, input("Ingrese los dos números separados por espacio: ").split())
-            print(f"Resultado: {multiplicar(a, b)}")
-        elif opcion == "5":
-            total = float(input("Ingrese el número base: "))
-            porcentaje = float(input("Ingrese el porcentaje: "))
-            print(f"Resultado: {encontrar_porcentaje(total, porcentaje)}")
-        elif opcion == "6":
-            a, b = map(float, input("Ingrese los dos números separados por espacio: ").split())
-            print(f"Resultado: {encontrar_resto(a, b)}")
-        elif opcion == "7":
-            a, b = map(float, input("Ingrese los dos números separados por espacio: ").split())
-            print(f"Resultado: {parte_entera_division(a, b)}")
-        elif opcion == "8":
-            numero = int(input("Ingrese un número: "))
-            print(f"¿Es primo? {'Sí' if es_primo(numero) else 'No'}")
-        elif opcion == "9":
-            print("Gracias por usar la calculadora. ¡Adiós!")
-            break
-        else:
-            print("Opción no válida. Intente de nuevo.")
-
-if __name__ == "__main__":
-    main()
